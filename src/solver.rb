@@ -5,9 +5,9 @@ class Solver
         n * factorial(n - 1)
     end
 
-    def reverse(s)
+    def reverseString(s)
         return '' if s.empty?
-        s[-1] + reverse(s[0..-2])
+        s[-1] + reverseString(s[0 .. -2])
     end
 
     def fizzbuzz(num)
@@ -26,5 +26,5 @@ end
 
 solver = Solver.new
 puts solver.factorial(5) # 120
-puts solver.reverse('hello') # olleh
+puts solver.reverseString('hello') # olleh
 puts solver.fizzbuzz(5) # Buzz
